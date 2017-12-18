@@ -26,23 +26,23 @@ Part II - Create a static View for a List of Books.
 ```javascript
 // Schema
 Book {
-ID (integer, optional),
-Title (string, optional),
-Description (string, optional),
-PageCount (integer, optional),
-Excerpt (string, optional),
-PublishDate (string, optional)
+  ID (integer, optional),
+  Title (string, optional),
+  Description (string, optional),
+  PageCount (integer, optional),
+  Excerpt (string, optional),
+  PublishDate (string, optional)
 }
 // JSON
 [
-{
-"ID": 0,
-"Title": "React Native in Action",
-"Description": "From Beginner to Ninja",
-"PageCount": 0,
-"Excerpt": "string",
-"PublishDate": "2017-12-18T07:02:00.802Z"
-}
+  {
+    "ID": 0,
+    "Title": "React Native in Action",
+    "Description": "From Beginner to Ninja",
+    "PageCount": 0,
+    "Excerpt": "string",
+    "PublishDate": "2017-12-18T07:02:00.802Z"
+  }
 ]
 ```
 ---
