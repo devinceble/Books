@@ -12,17 +12,22 @@ Introduction to cross platform native mobile app using React Native
     [X] 4. Create a method to Create a Book via REST.
     [X] 5. Create a method to Edit a Book via REST.
     [X] 6. Create a method to Delete a Book via REST.
-    [ ] ... Do 1 to 6 First ...
+    [X] EJECT
 
 ---
 
-Part VI - Create a method to Delete a Book via REST.
+EJECT - Ejecting from Create React Native App
 ===
 ---
 
-###### I. Use api library to Delete a Book
+###### I. Install react-native-cli and Eject
+```bash
+    # Using NPM
+    $ npm install -g react-native-cli
+    # Using YARN
+    $ yarn global add react-native-cli
 
-    Update Home Container to Delete a Book from the REST api
-    https://goo.gl/xXWWM9
-
+    # Eject
+    $ yarn eject
+```
 ---
