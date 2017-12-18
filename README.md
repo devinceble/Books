@@ -20,7 +20,7 @@ Part V - Create a method to Edit a Book via REST.
 ===
 ---
 
-###### I. Use api library to Create a new Book List
+###### I. Use api library to Edit a Book
 
     Update Create Container to Edit/Update a Book List from the REST api
     https://goo.gl/xXWWM9
