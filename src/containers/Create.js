@@ -4,7 +4,9 @@ import {
   Button,
   TextInput,
   StyleSheet,
+  Alert,
 } from 'react-native';
+import api from '../lib/api';
 
 class CreateScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -29,8 +31,30 @@ class CreateScreen extends React.Component {
       New: params.new,
     };
   }
-  render() {
+
+  async postNewBook() {
     const { goBack } = this.props.navigation;
+    api.post('/Books', {
+      body: {
+        ID: this.state.ID,
+        Title: this.state.Title,
+        Description: this.state.Description,
+        PageCount: this.state.PageCount,
+      }
+    }).then((json) => {
+      if (json.body && json.status === 200) {
+        Alert.alert('Book successfully added to List');
+        goBack(null);
+      } else {
+        Alert.alert('Failed to a new Book List.');
+      }
+    }).catch((error) => {
+      console.warn(error)
+    });
+  }
+
+  render() {
+
     const { New, ID, Title, Description, PageCount, Excerpt, PublishDate } = this.state;
     return (
       <View>
@@ -61,9 +85,15 @@ class CreateScreen extends React.Component {
         />
         <Button
           title={New ? 'Add Book' : 'Edit Book'}
-          onPress={() =>
-            goBack(null)
-          }
+          onPress={() => {
+            if (ID && Title) {
+              if (New) {
+                this.postNewBook();
+              }
+            } else {
+              Alert.alert('Please check empty fields!');
+            }
+          }}
         />
       </View>
     );
