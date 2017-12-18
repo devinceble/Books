@@ -6,7 +6,8 @@ import {
 import {
   ListBooks,
 } from '../components'
-import listBooks from '../data/books.json';
+// import listBooks from '../data/books.json';
+import api from '../lib/api';
 
 class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -22,8 +23,27 @@ class HomeScreen extends React.Component {
     };
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      listBooks: [],
+      fetchinglistBooks: false,
+    };
+  }
+
+  async getListOfBooks() {
+    this.setState({ fetchinglistBooks: true });
+    const listBooks = await api.get('/Books');
+    this.setState({ listBooks: listBooks.body, fetchinglistBooks: false });
+  }
+
+  componentDidMount() {
+    this.getListOfBooks();
+  }
+
   render() {
     const { navigate } = this.props.navigation;
+    const { listBooks } = this.state;
     return (
       <View>
         <ListBooks

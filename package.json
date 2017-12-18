@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "expo": "^23.0.4",
+    "frisbee": "^1.6.4",
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-navigation": "^1.0.0-beta.21"
