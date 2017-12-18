@@ -3,6 +3,10 @@ import {
   Button,
   View,
 } from 'react-native';
+import {
+  ListBooks,
+} from '../components'
+import listBooks from '../data/books.json';
 
 class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -22,11 +26,14 @@ class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View>
-        <Button
-          title="Edit Book"
-          onPress={() =>
-            navigate('Create', { new: false })
-          }
+        <ListBooks
+          listBooks={listBooks}
+          onEdit={(data) => {
+            navigate('Create', { new: false, data });
+          }}
+          onDelete={(data) => {
+            console.warn('Delete', data);
+          }}
         />
       </View>
     );
