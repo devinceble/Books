@@ -11,30 +11,31 @@ Introduction to cross platform native mobile app using React Native
     [ ] 5. Create a method to Edit a Book via REST.
     [ ] 6. Create a method to Delete a Book via REST.
     [ ] ...
-
-
-Part I
 ---
 
-###### I. Install create-react-native-app npm package
+# Part I - Create a React-Native Project
+---
+
+#### I. Install create-react-native-app npm package
     # Using NPM
     $ npm install -g create-react-native-app
 
     # Using YARN
     $ yarn global add create-react-native-app
-
-###### II. Create your first React-Native Project
+---
+#### II. Create your first React-Native Project
     # Using create-react-native-app
     $ create-react-native-app Books // replace Books with your Project Name
 
-
-###### III. Install Exponents App on your phone.
+---
+#### III. Install Exponents App on your phone.
 
     https://expo.io/tools
-
-###### IV. Running Local Development Server
+---
+#### IV. Running Local Development Server
     # Using NPM
     $ npm start
 
     # Using YARN
     $ yarn start
+---
