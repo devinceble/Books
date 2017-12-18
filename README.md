@@ -48,6 +48,9 @@ Part II - Create a static View for a List of Books.
 ---
 
 ###### II. Use a React Navigation
+    # For more advance navigation you can Use
+    wix react-native-navigation https://git.io/vbi3n
+
 ```bash
     # Use react-navigation
 
