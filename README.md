@@ -11,18 +11,18 @@ Introduction to cross platform native mobile app using React Native
     [X] 3. Create a method to Get List of Books via REST.
     [X] 4. Create a method to Create a Book via REST.
     [X] 5. Create a method to Edit a Book via REST.
-    [ ] 6. Create a method to Delete a Book via REST.
+    [X] 6. Create a method to Delete a Book via REST.
     [ ] ... Do 1 to 6 First ...
 
 ---
 
-Part V - Create a method to Edit a Book via REST.
+Part VI - Create a method to Delete a Book via REST.
 ===
 ---
 
-###### I. Use api library to Create a new Book List
+###### I. Use api library to Delete a Book
 
-    Update Create Container to Edit/Update a Book List from the REST api
+    Update Home Container to Delete a Book from the REST api
     https://goo.gl/xXWWM9
 
 ---

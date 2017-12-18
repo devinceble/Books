@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Button,
   View,
+  Alert,
 } from 'react-native';
 import {
   ListBooks,
@@ -37,6 +38,19 @@ class HomeScreen extends React.Component {
     this.setState({ listBooks: listBooks.body, fetchinglistBooks: false });
   }
 
+  async deleteBook(data) {
+    const { goBack } = this.props.navigation;
+    api.del(`/Books/${data.ID}`).then((json) => {
+      if (json.status === 200) {
+        Alert.alert(`${data.Title} Deleted`);
+      } else {
+        Alert.alert('Failed to a Delete Book.');
+      }
+    }).catch((error) => {
+      console.warn(error)
+    });
+  }
+
   componentDidMount() {
     this.getListOfBooks();
   }
@@ -52,7 +66,7 @@ class HomeScreen extends React.Component {
             navigate('Create', { new: false, data });
           }}
           onDelete={(data) => {
-            console.warn('Delete', data);
+            this.deleteBook(data);
           }}
         />
       </View>
