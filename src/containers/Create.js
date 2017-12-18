@@ -46,7 +46,28 @@ class CreateScreen extends React.Component {
         Alert.alert('Book successfully added to List');
         goBack(null);
       } else {
-        Alert.alert('Failed to a new Book List.');
+        Alert.alert('Failed to add Book.');
+      }
+    }).catch((error) => {
+      console.warn(error)
+    });
+  }
+
+  async editBook() {
+    const { goBack } = this.props.navigation;
+    api.put(`/Books/${this.state.ID}`, {
+      body: {
+        ID: this.state.ID,
+        Title: this.state.Title,
+        Description: this.state.Description,
+        PageCount: this.state.PageCount,
+      }
+    }).then((json) => {
+      console.log(json);
+      if (json.body && json.status === 200) {
+        Alert.alert('Book successfully Updated');
+      } else {
+        Alert.alert('Failed to a Update Book.');
       }
     }).catch((error) => {
       console.warn(error)
@@ -89,6 +110,8 @@ class CreateScreen extends React.Component {
             if (ID && Title) {
               if (New) {
                 this.postNewBook();
+              } else {
+                this.editBook();
               }
             } else {
               Alert.alert('Please check empty fields!');
