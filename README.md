@@ -15,13 +15,12 @@ Introduction to cross platform native mobile app using React Native
 ---
 
 Part II - Create a static View for a List of Books.
----
+===
 ---
 
 ###### I. Use a Schema
     # Use Data Schema at
     https://fakerestapi.azurewebsites.net/swagger/ui/index#/Books
-
 ```javascript
   // Schema
   Book {
@@ -32,7 +31,6 @@ Part II - Create a static View for a List of Books.
     Excerpt (string, optional),
     PublishDate (string, optional)
   }
-
   // JSON
   [
     {
