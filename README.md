@@ -1,6 +1,8 @@
 Introduction to cross platform native mobile app using React Native
 ===
 
+#### Source Code: https://git.io/vbiLi
+
 ##### Creating Books React Native Project
 
     Objectives:
@@ -17,25 +19,30 @@ Introduction to cross platform native mobile app using React Native
 ---
 
 #### I. Install create-react-native-app npm package
+```bash
     # Using NPM
     $ npm install -g create-react-native-app
 
     # Using YARN
     $ yarn global add create-react-native-app
+```
 ---
 #### II. Create your first React-Native Project
+```bash
     # Using create-react-native-app
-    $ create-react-native-app Books // replace Books with your Project Name
+    $ create-react-native-app Books # replace Books with your Project Name
+```
 
 ---
 #### III. Install Exponents App on your phone.
-
     https://expo.io/tools
 ---
 #### IV. Running Local Development Server
+```bash
     # Using NPM
     $ npm start
 
     # Using YARN
     $ yarn start
+```
 ---
