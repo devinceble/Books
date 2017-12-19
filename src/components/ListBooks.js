@@ -12,6 +12,7 @@ class ListBooks extends React.Component {
   render() {
     return (
       <FlatList
+        refreshControl={this.props.refreshControl}
         style={styles.scroll}
         data={this.props.listBooks}
         keyExtractor={(item, index) => index}

@@ -1,5 +1,5 @@
 const config = {
-  baseURI: 'https://fakerestapi.azurewebsites.net/api',
+  baseURI: 'http://localhost:3000',
 }
 
 export default config;

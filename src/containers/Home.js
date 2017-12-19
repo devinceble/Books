@@ -3,6 +3,7 @@ import {
   Button,
   View,
   Alert,
+  RefreshControl,
 } from 'react-native';
 import {
   ListBooks,
@@ -61,6 +62,12 @@ class HomeScreen extends React.Component {
     return (
       <View>
         <ListBooks
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.fetchinglistBooks}
+              onRefresh={this.getListOfBooks.bind(this)}
+            />
+          }
           listBooks={listBooks}
           onEdit={(data) => {
             navigate('Create', { new: false, data });
