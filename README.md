@@ -19,9 +19,10 @@
 ---
 
 ### I. Use a Schema
-    # Use Data Schema at
-      https://goo.gl/xXWWM9
+
 ```javascript
+// Use Data Schema at
+// https://goo.gl/xXWWM9
 // Schema
 Book {
   ID (integer, optional),
