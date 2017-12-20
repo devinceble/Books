@@ -1,9 +1,8 @@
-Introduction to cross platform native mobile app using React Native
-===
+## Introduction to cross platform native mobile app using React Native
 
-#### Source Code: https://git.io/vbiLi
+*** Source Code: https://git.io/vbiLi ***
 
-##### Creating Books React Native Project
+### Creating Books React Native Project
 
     Objectives:
     [X] 1. Create a React-Native Project using create-react-native-app tool
@@ -16,11 +15,10 @@ Introduction to cross platform native mobile app using React Native
 
 ---
 
-Part III - Create a method to Get List of Books via REST.
-===
+## Part III - Create a method to Get List of Books via REST.
 ---
 
-###### I. Install frisbee npm package
+### I. Install frisbee npm package
 ```bash
   # Using NPM
   $ npm install frisbee --save
@@ -28,13 +26,13 @@ Part III - Create a method to Get List of Books via REST.
   $ yarn add frisbee
 ```
 ---
-###### II. Create api library and config file
+### II. Create api library and config file
 
     Create a config file
     Create a api.js library
 
 ---
-###### III. Use api library to Get List of Books
+### III. Use api library to Get List of Books
 
     Update Home Container to fetch/Get list of Books from the REST api
     https://goo.gl/xXWWM9
