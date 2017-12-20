@@ -1,9 +1,8 @@
-Introduction to cross platform native mobile app using React Native
-===
+## Introduction to cross platform native mobile app using React Native
 
-#### Source Code: https://git.io/vbiLi
+*** Source Code: https://git.io/vbiLi ***
 
-##### Creating Books React Native Project
+### Creating Books React Native Project
 
     Objectives:
     [X] 1. Create a React-Native Project using create-react-native-app tool
@@ -16,11 +15,10 @@ Introduction to cross platform native mobile app using React Native
 
 ---
 
-Part V - Create a method to Edit a Book via REST.
-===
+## Part V - Create a method to Edit a Book via REST.
 ---
 
-###### I. Use api library to Edit a Book
+### I. Use api library to Edit a Book
 
     Update Create Container to Edit/Update a Book List from the REST api
     https://goo.gl/xXWWM9
