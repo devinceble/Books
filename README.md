@@ -1,9 +1,8 @@
-Introduction to cross platform native mobile app using React Native
-===
+## Introduction to cross platform native mobile app using React Native
 
-#### Source Code: https://git.io/vbiLi
+*** Source Code: https://git.io/vbiLi ***
 
-##### Creating Books React Native Project
+### Creating Books React Native Project
 
     Objectives:
     [X] 1. Create a React-Native Project using create-react-native-app tool
@@ -16,11 +15,10 @@ Introduction to cross platform native mobile app using React Native
 
 ---
 
-EJECT - Ejecting from Create React Native App
-===
+## EJECT - Ejecting from Create React Native App
 ---
 
-###### I. Install react-native-cli and Eject
+### I. Install react-native-cli and Eject
 ```bash
     # Using NPM
     $ npm install -g react-native-cli
