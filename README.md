@@ -1,9 +1,8 @@
-Introduction to cross platform native mobile app using React Native
-===
+## Introduction to cross platform native mobile app using React Native
 
-#### Source Code: https://git.io/vbiLi
+*** Source Code: https://git.io/vbiLi ***
 
-##### Creating Books React Native Project
+### Creating Books React Native Project
 
     Objectives:
     [X] 1. Create a React-Native Project using create-react-native-app tool
@@ -16,14 +15,14 @@ Introduction to cross platform native mobile app using React Native
 
 ---
 
-Part II - Create a static View for a List of Books.
-===
+## Part II - Create a static View for a List of Books.
 ---
 
-###### I. Use a Schema
-    # Use Data Schema at
-      https://goo.gl/xXWWM9
+### I. Use a Schema
+
 ```javascript
+// Use Data Schema at
+// https://goo.gl/xXWWM9
 // Schema
 Book {
   ID (integer, optional),
@@ -47,7 +46,7 @@ Book {
 ```
 ---
 
-###### II. Use a React Navigation
+### II. Use a React Navigation
     # For more advance navigation you can Use
     wix react-native-navigation https://git.io/vbi3n
 
@@ -68,7 +67,7 @@ $ yarn add react-navigation
 
 ---
 
-###### III. Create Container(s) and Component(s)
+### III. Create Container(s) and Component(s)
 
     1. Create a Container for Home Screen
     2. Create a Card Component for the List of Books
@@ -77,7 +76,7 @@ $ yarn add react-navigation
 
 ---
 
-###### IV. Feed with a sample static Data
+### IV. Feed with a sample static Data
     Use an Array of JSON to test the Home Container and
     the List of Books Card Component
 
