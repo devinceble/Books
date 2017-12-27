@@ -10,23 +10,12 @@ import {
 } from '../components'
 // import listBooks from '../data/books.json';
 import api from '../lib/api';
+let self;
 
 class HomeScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    const { navigate } = navigation;
-    return {
-      title: 'Books',
-      headerRight: (
-        <Button
-          title="Add Book"
-          onPress={() => navigate('Create', { new: true })}
-        />
-      ),
-    };
-  };
-
   constructor(props) {
     super(props);
+    self = this;
     this.state = {
       listBooks: [],
       fetchinglistBooks: false,
@@ -44,6 +33,7 @@ class HomeScreen extends React.Component {
     api.del(`/Books/${data.ID}`).then((json) => {
       if (json.status === 200) {
         Alert.alert(`${data.Title} Deleted`);
+        this.getListOfBooks();
       } else {
         Alert.alert('Failed to a Delete Book.');
       }
@@ -51,6 +41,19 @@ class HomeScreen extends React.Component {
       console.warn(error)
     });
   }
+
+  static navigationOptions = ({ navigation }) => {
+    const { navigate } = navigation;
+    return {
+      title: 'Books',
+      headerRight: (
+        <Button
+          title="Add Book"
+          onPress={() => navigate('Create', { new: true, refresh: () => { self.getListOfBooks(); } })}
+        />
+      ),
+    };
+  };
 
   componentDidMount() {
     this.getListOfBooks();
@@ -70,7 +73,7 @@ class HomeScreen extends React.Component {
           }
           listBooks={listBooks}
           onEdit={(data) => {
-            navigate('Create', { new: false, data });
+            navigate('Create', { new: false, data, refresh: () => { self.getListOfBooks(); } });
           }}
           onDelete={(data) => {
             this.deleteBook(data);

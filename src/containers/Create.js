@@ -33,18 +33,20 @@ class CreateScreen extends React.Component {
   }
 
   async postNewBook() {
-    const { goBack } = this.props.navigation;
+    const { goBack, state } = this.props.navigation;
     api.post('/Books', {
       body: {
-        ID: this.state.ID,
+        ID: parseInt(this.state.ID),
         Title: this.state.Title,
         Description: this.state.Description,
-        PageCount: this.state.PageCount,
+        PageCount: parseInt(this.state.PageCount),
       }
     }).then((json) => {
       if (json.body && json.status === 200) {
         Alert.alert('Book successfully added to List');
-        goBack(null);
+        this.setState({ New: false }, () => {
+          state.params.refresh();
+        });
       } else {
         Alert.alert('Failed to add Book.');
       }
@@ -54,18 +56,19 @@ class CreateScreen extends React.Component {
   }
 
   async editBook() {
-    const { goBack } = this.props.navigation;
+    const { goBack, setParams, state } = this.props.navigation;
     api.put(`/Books/${this.state.ID}`, {
       body: {
-        ID: this.state.ID,
+        ID: parseInt(this.state.ID),
         Title: this.state.Title,
         Description: this.state.Description,
-        PageCount: this.state.PageCount,
+        PageCount: parseInt(this.state.PageCount),
       }
     }).then((json) => {
-      console.log(json);
       if (json.body && json.status === 200) {
         Alert.alert('Book successfully Updated');
+        setParams({ data: json.body });
+        state.params.refresh();
       } else {
         Alert.alert('Failed to a Update Book.');
       }
@@ -80,6 +83,7 @@ class CreateScreen extends React.Component {
     return (
       <View>
         <TextInput
+          editable={New}
           placeholder="Book ID"
           style={[styles.container, styles.textInput]}
           onChangeText={(value) => this.setState({ ID: value })}
